@@ -1,2 +1,18 @@
-<h1>{{title}} 🚀</h1>
-<p>Welcome Ironhacker!</p>
+<div class="info">
+    <h3>List of all places</h3>
+    <a href="/new">Add a new place</a>
+    <ul>
+        {{#each places}}
+            <li>
+                <a href="/places/{{_id}}">{{name}}</a>
+                |
+                <a href="/places/edit/{{_id}}">Edit</a>
+                |
+                <a href="/places/delete/{{_id}}">Delete</a>
+            </li>
+        {{/each }}
+    </ul>
+    <div id="map"></div>
+
+    {{!-- add map here --}}
+</div>
